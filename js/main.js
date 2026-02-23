@@ -36,6 +36,24 @@ function dropped(e) {
     currentDraggedElement = null;
 }
 
+labels.forEach(label => {
+  // adds a dataset to each label that has the value of the parent elements id for when the drops are reset
+  label.dataset.originalParent = label.parentElement.id; 
+});
+
+function resetDrops() {
+  labels.forEach(label => {
+    //Uses the id saved to each labels dataset as well as query selector to hook into the parent element
+    const originalParentId = label.dataset.originalParent;
+    const originalParent = document.querySelector(`#${originalParentId}`);
+
+    //sets a conditional statement, so that if the parent container exists, the label is appended to it as a child element
+    if (originalParent) {
+      originalParent.appendChild(label);
+    }
+  });
+}
+
 
 // Event Listeners -- Drag Labels, Drop Labels 
 labels.forEach(label => label.addEventListener('dragstart', dragStart));
@@ -45,3 +63,5 @@ targetZones.forEach(zone => {
     zone.addEventListener('dragover', draggedOver);
     zone.addEventListener('drop', dropped);
 })
+
+resetButton.addEventListener('click', resetDrops);
