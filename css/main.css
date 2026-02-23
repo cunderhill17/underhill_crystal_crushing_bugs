@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+h1, p {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.body-image {
+    display: block;
+    max-width: 100%;
+}
+
+.anatomy-image {
+    /* Added border radius and shadow here so it shows outside box */
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    /* prevents the image from spilling out */
+    overflow: hidden;
+}
+
+.target-zone {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(200,200,200,0.2);
+    border: 2px dashed rgba(80,206,22,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+}
+
+#Heart {
+    top: 40%;
+    left: 50%;
+}
+
+#Lungs {
+    top: 37%;
+    left: 35%;
+    width: 70px;
+    height: 80px;
+}
+
+#Liver {
+    top: 55%;
+    left: 35%;
+}
+
+#Stomach {
+    top: 55%;
+    left: 50%;
+}
+
+#Intestines {
+    top: 74%;
+    left: 37%;
+    width: 120px;
+    height: 60px;
+}
+
+.labels-container {
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.labels-header {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.label {
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin: 10px 0px;
+    border-radius: 5px;
+    cursor: grab;
+    transition: all ease-in-out .2s;
+}
+
+.label:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.reset-btn {
+    display: block;
+    margin: 30px auto;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all ease-in-out .2s;
+}
+
+.reset-btn:hover {
+    background-color: #c0392b;
+}
+
+
+@media screen and (min-width: 768px) {
+    .container {
+        flex-direction: row;
+    }
+}
