@@ -25,6 +25,11 @@ function dropped(e) {
     e.preventDefault();
     console.log("dropped");
 
+    // prevent dropping if zone already has a drag item
+    // checks to see if the element represented by '.this' already has an element with a class called label
+    // if it does, then it exits the function using 'return' and doesn't execute the rest of the code
+    if (this.querySelector('.label')) return;
+
     this.appendChild(currentDraggedElement);
 
     //reset the reference
