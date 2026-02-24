@@ -26,16 +26,34 @@
             <h2 class="labels-header">Drag these labels to the correct body parts:</h2>
 
             <div id="label-box">
-                <div class="label" draggable="true">Heart</div>
-                <div class="label" draggable="true">Lungs</div>
-                <div class="label" draggable="true">Liver</div>
-                <div class="label" draggable="true">Stomach</div>
-                <div class="label" draggable="true">Intestines</div>
+                <div class="label" draggable="true" data-anatomy="Heart">Heart</div>
+                <div class="label" draggable="true" data-anatomy="Lungs">Lungs</div>
+                <div class="label" draggable="true" data-anatomy="Liver">Liver</div>
+                <div class="label" draggable="true" data-anatomy="Stomach">Stomach</div>
+                <div class="label" draggable="true" data-anatomy="Intestines">Intestines</div>
             </div>
 
             <button class="reset-btn" id="reset-btn">Reset Puzzle</button>
         </section>
     </main>
+
+    <section id="gameStart">
+        <!-- Add hidden h2 for 'game start menu' -->
+        <section>
+            <!-- Add hidden h3 for 'Game instructions' -->
+            <p>Please enjoy Human Anatomy Drag and Drop. In order to win you must drag and drop the correct labels on top of their corresponding anatomy. Quick as you can as the clock is keeping track!</p>
+        </section>
+
+        <button id="startButton">Start</button>
+    </section>
+
+    <section id="scoreCard">
+        <h2>Final Score</h2>
+        <p><span id="userScore">Total</span> Points</p>
+        <p id="gameMessage">Message from the system</p>
+        
+        <button id="playAgain">Play Again</button>
+    </section>
 
 
     
