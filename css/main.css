@@ -124,3 +124,64 @@ h1, p {
         flex-direction: row;
     }
 }
+
+
+/* Styling for additional Features */
+
+#gameStart {
+    position: absolute;
+    top: 0;
+    left: 4vw;
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    height: 95vh;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+    background-color: white;
+}
+
+#scoreCard {
+    position: absolute;
+    top: 0;
+    left: 4vw;
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    height: 95vh;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+    background-color: white;
+}
+
+#gameStart p, #scoreCard p {
+    margin: 5px 0px;
+}
+
+#startButton, #playAgain {
+    width: 100px;
+    padding: 10px;
+    margin: 10px auto;
+    background-color: #c0392b;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    display: inline;
+    cursor: pointer;
+}
+
+#gameStart.open {
+    display: flex;
+}
+
+#scoreCard.open {
+    display: flex;
+}
